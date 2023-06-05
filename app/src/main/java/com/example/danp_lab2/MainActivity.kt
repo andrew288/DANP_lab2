@@ -79,15 +79,15 @@ class MainActivity : ComponentActivity() {
                         }
 
                         composable("courseRegister") {
-                            CourseRegister(viewModel)
+                            CourseRegister(viewModel, navCotroller = navCotroller)
                         }
 
                         composable("studentRegister") {
-                            StudentRegister(viewModel)
+                            StudentRegister(viewModel, navCotroller = navCotroller)
                         }
 
                         composable("list") {
-                            LisCourses(viewModel)
+                            LisCourses(viewModel, navCotroller = navCotroller)
                         }
                     }
 

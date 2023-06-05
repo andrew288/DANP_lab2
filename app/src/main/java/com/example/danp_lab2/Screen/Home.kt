@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -15,7 +16,9 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.navigation.NavHostController
 
 @Composable
@@ -42,17 +45,19 @@ fun HomeView(navCotroller: NavHostController) {
                 ) {
                     Text(
                         text = "Gestion academica",
-                        color = Color.Black
+                        color = Color.Black,
+                        fontSize = 30.sp,
+                        fontWeight = FontWeight.ExtraBold,
                     )
-                    Button(onClick = { navCotroller.navigate("courseRegister") }) {
+                    Button(colors = ButtonDefaults.buttonColors(containerColor = Color.Green), onClick = { navCotroller.navigate("courseRegister") }) {
                         Text(text = "Registrar Curso")
                     }
 
-                    Button(onClick = { navCotroller.navigate("studentRegister") }) {
+                    Button(colors = ButtonDefaults.buttonColors(containerColor = Color.Green), onClick = { navCotroller.navigate("studentRegister") }) {
                         Text(text = "Registrar Estudiante")
                     }
 
-                    Button(onClick = { navCotroller.navigate("list") }) {
+                    Button(colors = ButtonDefaults.buttonColors(containerColor = Color.Green), onClick = { navCotroller.navigate("list") }) {
                         Text(text = "Listar")
                     }
                 }
